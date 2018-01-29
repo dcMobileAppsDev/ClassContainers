@@ -9,9 +9,22 @@
 
     <Grid x:Name="grdRoot"  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+        <Ellipse x:Name="elReset" Height="300" Width="300"
+                 Tapped="elReset_Tapped" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="Images/Oogway.jpg" Stretch="Uniform" />
+            </Ellipse.Fill>
+        </Ellipse>
+        
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <TextBlock Text="0" x:Name="tblCount" />
-            <Grid x:Name="grdBoard" Background="Blue" Height="300" Width="300">
+            <Grid x:Name="grdBoard" Height="300" Width="300">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset="0.166"/>
+                        <GradientStop Color="Blue" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
                 <Grid.RowDefinitions>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
